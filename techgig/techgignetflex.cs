@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace techgig
 {/* Hotel Room (100 Marks)
@@ -48,18 +44,18 @@ Memory Limit:
 Source Limit: 
 100 KB */
     class techgignetflex
-    {       
+    {
         static void Main(String[] args)
         {
             int a = Convert.ToInt32(Console.ReadLine());
-            check[] checks = new check[a];
+            check[] checks = new check[a]; 
             for (int i = 0; i < a; i++)
             {
                 string[] vs = Console.ReadLine().Split('#');
                 int[] xxx = new int[2];
                 for (int j = 0; j < 2; j++)
                 {
-                    if (Convert.ToInt32(vs[j][vs.Length-1])==65)
+                    if (Convert.ToInt32(vs[j][vs.Length - 1]) == 65)
                     {
                         xxx[j] = Operation1(vs[j], 0);
                     }
@@ -68,7 +64,7 @@ Source Limit:
                         xxx[j] = Operation1(vs[j], 12);
                     }
                 }
-                if (xxx[1]>xxx[0])
+                if (xxx[1] > xxx[0])
                 {
                     checks[i].duration = xxx[1] - xxx[0];
                 }
@@ -87,15 +83,15 @@ Source Limit:
                 //}
             }
         }
-        static int Operation1(string intime,int a)
+        static int Operation1(string intime, int a)
         {
             int time = 0;
             string str = "";
-            if (intime.Length==4)
+            if (intime.Length == 4)
             {
                 for (int i = 0; i < 2; i++)
                 {
-                    str+=intime[i];
+                    str += intime[i];
                 }
                 return time = a + Convert.ToInt32(str);
             }
