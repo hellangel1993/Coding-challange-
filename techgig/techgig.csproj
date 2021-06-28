@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>techgig.hackerRankCounting_Valleys</StartupObject>
+    <StartupObject>techgig.Amazon_Online_Assessment__OA__2021___Storage_Optimization</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Amazon Online Assessment %28OA%29 - Optimizing Box Weights.cs" />
+    <Compile Include="Amazon Online Assessment %28OA%29 2021 - Storage Optimization.cs" />
     <Compile Include="data-structure.cs" />
     <Compile Include="deccansoft1.cs" />
     <Compile Include="Geek1.cs" />
@@ -84,7 +86,10 @@
     <Compile Include="hackerearth_oct_circus_182.cs" />
     <Compile Include="hackerearth_oct_circus_184.cs" />
     <Compile Include="Hackerrank.cs" />
+    <Compile Include="hackerRank2Darry-DS.cs" />
     <Compile Include="hackerRankCounting_Valleys.cs" />
+    <Compile Include="hackerRankJumping_on_the_Clouds.cs" />
+    <Compile Include="hackerRankRepeated_String.cs" />
     <Compile Include="hacker_aug_picu_bank.cs" />
     <Compile Include="microsoft_code_car_race.cs" />
     <Compile Include="Program.cs" />
