@@ -1,4 +1,4 @@
-﻿using System;
+﻿    using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,7 @@ namespace techgig
     {
         static void Main(String[] args)
         {
+            
             string str = Console.ReadLine();
             int[] a = str.Split(' ').Select(n => Convert.ToInt32(n.ToString())).ToArray();
             int[] b = new int[a[0]];
