@@ -32,12 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>techgig.geekforgeek_trapping_rain_water</StartupObject>
+    <StartupObject>techgig.Microsoft_online_test</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net461\System.ValueTuple.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -62,6 +65,7 @@
     <Compile Include="Graphs ADT - implementation.cs" />
     <Compile Include="Graph_Max_Depth_of_binary_tree.cs" />
     <Compile Include="Graph_Same_tree.cs" />
+    <Compile Include="Greenway.cs" />
     <Compile Include="hackercode1.cs" />
     <Compile Include="hackercode10.cs" />
     <Compile Include="hackercode11.cs" />
@@ -97,13 +101,17 @@
     <Compile Include="hackerRankJumping_on_the_Clouds.cs" />
     <Compile Include="hackerRankRepeated_String.cs" />
     <Compile Include="hacker_aug_picu_bank.cs" />
+    <Compile Include="him.cs" />
     <Compile Include="leetcode.cs" />
     <Compile Include="leetcode2.cs" />
+    <Compile Include="LeetcodeLinkList.cs" />
     <Compile Include="leetcode_1334.cs" />
     <Compile Include="Leetcode_15.cs" />
     <Compile Include="Leetcode_200.cs" />
     <Compile Include="leetcode_399.cs" />
+    <Compile Include="microsoftqnlinetest2.cs" />
     <Compile Include="microsoft_code_car_race.cs" />
+    <Compile Include="Microsoft_online_test.cs" />
     <Compile Include="Pramp.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -137,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
