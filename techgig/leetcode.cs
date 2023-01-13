@@ -18,7 +18,94 @@ namespace techgig
             leetcode leetcode = new leetcode();
             //int[][] vs = new int[][] { new int[] { 4, 3, 1 }, new int[] {, 3, 2, 4 }, new int[] { 3 }, new int[] { 4 }, new int[] { } };
 
+            //int a = leetcode.MinInsertions("zjveiiwvc");
+            string s = leetcode.ShiftingLetters("abc", new int[][] { new int[] { 0, 1, 0 }, new int[] { 1, 2, 1 }, new int[] { 0, 2, 1 } });
+
         }
+
+        #region leetcode2381
+
+        public string ShiftingLetters(string s, int[][] shifts)
+        {
+            int n = s.Length;
+            int[] vs = new int[n+1];
+            for(int i = 0; i < shifts.Length; i++)
+            {
+                if(shifts[i][2] == 0)
+                {
+                    vs[shifts[i][0]] -= 1;
+                    vs[shifts[i][1]+1] += 1;
+                }
+                else if(shifts[i][2] == 1)
+                {
+                    vs[shifts[i][0]] += 1;
+                    vs[shifts[i][1]+1] -= 1;
+                }
+            }
+            for (int i = 1; i < vs.Length; i++)
+            {
+                vs[i] += vs[i - 1];
+            }
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < s.Length; i++)
+            {
+                char temp = ((char)((((s[i] - 'a' + vs[i])%26)+26)%26+'a'));
+                //int sum = s[i] + vs[i];
+                //if ('a' > s[i] + vs[i])
+                //{
+                //    temp = (char)('z' +1+ vs[i]);
+                //}
+                //else if('a'<=sum && 'z' > sum)
+                //{
+                //    temp = (char)(s[i] + vs[i]);
+                //}
+
+
+                
+                sb.Append(temp);
+            }
+
+            return sb.ToString();
+        }
+        
+        #endregion
+
+        #region leetcode1312
+        public int MinInsertions(string s)
+        {
+            string rev = "";
+
+            for (int i = s.Length - 1; i >= 0; i--)
+            {
+                rev += s[i].ToString();
+            }
+
+            string temp = s;
+            int maxLength = s.Length * 2;
+            for (int i = 0; i < s.Length; i++)
+            {
+                int count = 0;
+                for (int j = i + 1; j < s.Length; j++)
+                {
+                    if (rev[i] == rev[j])
+                    {
+                        count++;
+                    }
+                }
+                if (count > 0)
+                {
+                    maxLength -= 2;
+                }
+                else if (count == 0)
+                {
+                    maxLength -= 1;
+                    break;
+                }
+            }
+
+            return (maxLength - s.Length);
+        }
+        #endregion
 
         //#region 797 
         //public IList<IList<int>> AllPathsSourceTarget(int[][] graph)

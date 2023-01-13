@@ -545,6 +545,43 @@ namespace techgig
         }
         #endregion
 
+        #region leetcode 226
+        public TreeNode InvertTree(TreeNode root)
+        {
+            TreeNode temp = new TreeNode(root.val);
+
+            if (root.left != null)
+            {
+                temp.right = Expand(root.left);
+            }
+            if (root.right != null)
+            {
+                temp.left = Expand(root.right);
+            }
+
+            return temp;
+        }
+
+        //left
+        public TreeNode Expand(TreeNode old)
+        {
+            if (old == null)
+                return null;
+            TreeNode mirror = new TreeNode(old.val);
+
+            if (old.left != null)
+            {
+                old.right = Expand(old.left);
+            }
+            if (old.right != null)
+            {
+                old.left = Expand(old.right);
+            }
+
+            return mirror;
+        }
+        #endregion
+
         public class TreeNode
         {
             public int val;
@@ -572,7 +609,9 @@ namespace techgig
             //l.Connect(new Node116(1, new Node116(2, new Node116(4), new Node116(5), null), new Node116(3, new Node116(6), new Node116(7), null), null));
             //int a = l.MaxSubArray(new int[2] { -2, 1 });//, -3, 4, -1, 2, 1, -5, 4 });
             //var vs = l.SpiralOrder(new int[3][] { new int[3] { 1, 2, 3 }, new int[3] { 4, 5, 6 }, new int[3] { 7, 8, 9 } });
-            int[][] vs = l.GenerateMatrix(3);
+            //int[][] vs = l.GenerateMatrix(3);
+
+            l.InvertTree(new TreeNode(4, new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7, new TreeNode(6), new TreeNode(9))));
         }
     }
 }

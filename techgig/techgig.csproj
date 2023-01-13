@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>techgig</RootNamespace>
     <AssemblyName>techgig</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>techgig.Scaler_Codes</StartupObject>
+    <StartupObject>techgig.Scaler</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -102,6 +103,7 @@
     <Compile Include="hackerRankRepeated_String.cs" />
     <Compile Include="hacker_aug_picu_bank.cs" />
     <Compile Include="him.cs" />
+    <Compile Include="Leetcode 18.cs" />
     <Compile Include="leetcode.cs" />
     <Compile Include="leetcode2.cs" />
     <Compile Include="LeetcodeLinkList.cs" />
@@ -116,7 +118,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Replace_white_space.cs" />
-    <Compile Include="Scaler Codes.cs" />
+    <Compile Include="Scaler.cs" />
     <Compile Include="techgig11.cs" />
     <Compile Include="techgig12.cs" />
     <Compile Include="techgig13.cs" />
