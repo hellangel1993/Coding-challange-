@@ -34,8 +34,112 @@ namespace techgig
             //BST retr= Scaler.checkBST(new TreeNode(5,new TreeNode(3,new TreeNode(1,null,null),new TreeNode(4,null,null)),new TreeNode(8,new TreeNode(7,null,null),new TreeNode(9,null,null))));
             //int retr = Scaler.checkBST(new TreeNode(20, new TreeNode(14, new TreeNode(11, null, null), null), new TreeNode(12, null, null)));
             //int sol = Scaler.uniquePathsWithObstacles(new List<List<int>> { new List<int> { 0, 0, 0 }, new List<int> { 0, 1, 0 }, new List<int> { 0, 0, 0 } });
-            int sol = Scaler.MinimumTotal(new List<List<int>> { new List<int> { 9 }, new List<int> { 3, 8 }, new List<int> { 0, 2, 4 }, new List<int> { 8, 3, 9, 0 }, new List<int> { 5, 2, 2, 7, 3 }, new List<int> { 7, 9, 0, 2, 3, 9 }, new List<int> { 9, 7, 0, 3, 9, 8, 6 }, new List<int> { 5, 7, 6, 2, 7, 0, 3, 9 } });
+            //int sol = Scaler.MinimumTotal(new List<List<int>> { new List<int> { 9 }, new List<int> { 3, 8 }, new List<int> { 0, 2, 4 }, new List<int> { 8, 3, 9, 0 }, new List<int> { 5, 2, 2, 7, 3 }, new List<int> { 7, 9, 0, 2, 3, 9 }, new List<int> { 9, 7, 0, 3, 9, 8, 6 }, new List<int> { 5, 7, 6, 2, 7, 0, 3, 9 } });
+            //int sol = Scaler.solve(new List<int> { 359, 963, 465, 706, 146, 282, 828, 962, 492 }, new List<int> { 96, 43, 28, 37, 92, 5, 3, 54, 93 }, 383);
+            //string sol = Scaler.day39ass1("crulgzfkif gg ombt vemmoxrgf qoddptokkz op xdq hv ");
+            //int sol = Scaler.day39ass3(7);
+            int sol = Scaler.coinchange2(new List<int> { 1, 2, 3 }, 4);
         }
+
+        #region day 96 ass1
+        public int coinchange2(List<int> A, int B)
+        {
+            int mod = 10000007;
+            int[] ways = new int[B + 1];
+            ways[0] = 1;
+
+            for (int i = 0; i <= A.Count; i++)
+            {
+                for (int j = A[i]; j <= B; j++)
+                {
+                    ways[j] += ways[j - A[i]];
+                    ways[j] %= mod;
+                }
+            }
+
+            return ways[B];
+        }
+        #endregion
+
+        #region day 39 ass3
+        public List<char> day39ass3(List<char> A)
+        {
+            List<char> res = new List<char>();
+            for (int i = 0; i < A.Count; i++)
+            {
+                if (A[i] - 'A' < 26 && A[i] - 'A' >= 0)
+                {
+                    res.Add((char)('a' + (A[i] - 'A')));
+                }
+                else
+                {
+                    res.Add(A[i]);
+                }
+            }
+            return res;
+        }
+        #endregion
+
+        #region day 39 ass1
+        public string day39ass1(string A)
+        {
+            if (A == "")
+            {
+                return A;
+            }
+            string[] vs = A.Split(' ');
+            string res = "";
+            for (int i = 0; i < vs.Length; i++)
+            {
+                if (vs[i] != "")
+                {
+                    if (i != 0)
+                    {
+                        res += " ";
+                    }
+                    res += vs[i];
+                }
+            }
+            return res;
+        }
+        #endregion
+
+        #region day 95 ass1
+        public int solve(List<int> A, List<int> B, int C)
+        {
+            return weight(A, B, 0, C);
+        }
+        //Dictionary<string, int> cache = new Dictionary<string, int>();
+        public int weight(List<int> V, List<int> W, int i, int j)
+        {
+            if (i > V.Count - 1 || j == 0)
+            {
+                return 0;
+            }
+            if (cache.ContainsKey(i + "@" + j))
+            {
+                return cache[i + "@" + j];
+            }
+            else
+            {
+                int left = weight(V, W, i + 1, j);
+                int pick = 0;
+                if (j >= W[i])
+                {
+                    pick = weight(V, W, i + 1, j - W[i]) + V[i];
+                }
+                if (left >= pick)
+                {
+                    cache.Add(i + "@" + j, left);
+                }
+                else
+                {
+                    cache.Add(i + "@" + j, pick);
+                }
+                return cache[i + "@" + j];
+            }
+        }
+        #endregion
 
         #region day 94 ass2
         public int MinimumTotal(List<List<int>> A)
