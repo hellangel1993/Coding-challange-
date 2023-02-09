@@ -38,8 +38,34 @@ namespace techgig
             //int sol = Scaler.solve(new List<int> { 359, 963, 465, 706, 146, 282, 828, 962, 492 }, new List<int> { 96, 43, 28, 37, 92, 5, 3, 54, 93 }, 383);
             //string sol = Scaler.day39ass1("crulgzfkif gg ombt vemmoxrgf qoddptokkz op xdq hv ");
             //int sol = Scaler.day39ass3(7);
-            int sol = Scaler.coinchange2(new List<int> { 1, 2, 3 }, 4);
+            //int sol = Scaler.coinchange2(new List<int> { 1, 2, 3 }, 4);
+            int[] sol = Scaler.RotationGame(new int[] { 1, 1, 1, 1, 1 }, 6);
         }
+
+        #region Day 25 ass1
+        public int[] RotationGame(int[] vs,int B)
+        {
+            int count = 0;
+            int[] res = new int[vs.Length];
+            while (count < vs.Length)
+            {
+                int index = count + B;
+                if (index >= vs.Length)
+                {
+                    index = index % vs.Length;
+                }
+                res[index] = vs[count];
+                count++;
+            }
+
+            for (int i = 0; i < res.Length; i++)
+            {
+                Console.Write(res[i] + " ");
+            }
+
+            return res;
+        }
+        #endregion
 
         #region day 96 ass1
         public int coinchange2(List<int> A, int B)
