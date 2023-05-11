@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace techgig
 {
@@ -70,9 +71,1236 @@ namespace techgig
             //var a = Scaler.Day12HW4(-2213);
             //var a=Scaler.Day33ass2(8);
             //var a = Scaler.Day40ass1(new List<int> { 1, 2, 2, 1 }, new List<int> { 2, 3, 1, 3 });
-            var a= Scaler.Day37ass5(10);
+            //var a= Scaler.Day37ass5(10);
+            //var a = Scaler.Day40ass2(new List<int> { 8, 15, 1, 10, 5, 19, 19, 3, 5, 6, 6, 2, 8, 2, 12, 16, 3 });
+            //var a = Scaler.lszero(new List<int> { -19, 8, 2, -8, 19, 5, -2, -23 });
+            //var a = Scaler.twoSum(new List<int> { 4, 7, -4, 2, 2, 2, 3, -5, -3, 9, -4, 9, -7, 7, -1, 9, 9, 4, 1, -4, -2, 3, -3, -5, 4, -7, 7, 9, -4, 4, -8 }, -3);
+            //var a = Scaler.Day41ass1(new List<int> { 1, 1000000000 }, 1000000000);
+            //var a = Scaler.lengthoflongeststring("abcabcbb");
+            //var a = Scaler.patternStach("))))))");
+            //var a = Scaler.SortedArrayToBST(new int[] { 1, 2, 3, 4, 5, -1, -1, -1, -1, -1,6,-1, -1, });
+            //var a= Scaler.inorderTraversal(new TreeNode(1,new TreeNode(6,null,null),new TreeNode(2,new TreeNode(3,null,null),null)));
+            //var a = Scaler.preorderTraversal(new TreeNode(1, new TreeNode(2, null, null), new TreeNode(2, new TreeNode(3, null, null), null)));
+            //var a = Scaler.longestPalindrome("abb");
+            //var a= Scaler.postorderTraversal(new TreeNode(1, new TreeNode(6, null, null), new TreeNode(2, new TreeNode(3, null, null), null)));
+            //var a = Scaler.Day46ass2(new List<List<int>> { new List<int> { 2, 19, 0 }, new List<int> { 2, 5, 1 }, new List<int> { 2, 8, 0 }, new List<int> { 1, 7, -1 }, new List<int> { 1, 5, -1 } });
+            //Scaler.faactset();
+            //var a = Scaler.countMinSquares(6);
+            //var a = Scaler.maxSubArray(new List<int> { -120, -202, -293, -60, -261, -67, 10, 82, -334, -393, -428, -182, -138, -167, -465, -347, -39, -51, -61, -491, -216, -36, -281, -361, -271, -368, -122, -114, -53, -488, -327, -182, -221, -381, -431, -161, -59, -494, -406, -298, -268, -425, -88, -320, -371, -5, 36, 89, -194, -140, -278, -65, -38, -144, -407, -235, -426, -219, 62, -299, 1, -454, -247, -146, 24, 2, -59, -389, -77, -19, -311, 18, -442, -186, -334, 41, -84, 21, -100, 65, -491, 94, -346, -412, -371, 89, -56, -365, -249, -454, -226, -473, 91, -412, -30, -248, -36, -95, -395, -74, -432, 47, -259, -474, -409, -429, -215, -102, -63, 80, 65, 63, -452, -462, -449, 87, -319, -156, -82, 30, -102, 68, -472, -463, -212, -267, -302, -471, -245, -165, 43, -288, -379, -243, 35, -288, 62, 23, -444, -91, -24, -110, -28, -305, -81, -169, -348, -184, 79, -262, 13, -459, -345, 70, -24, -343, -308, -123, -310, -239, 83, -127, -482, -179, -11, -60, 35, -107, -389, -427, -210, -238, -184, 90, -211, -250, -147, -272, 43, -99, 87, -267, -270, -432, -272, -26, -327, -409, -353, -475, -210, -14, -145, -164, -300, -327, -138, -408, -421, -26, -375, -263, 7, -201, -22, -402, -241, 67, -334, -452, -367, -284, -95, -122, -444, -456, -152, 25, 21, 61, -320, -87, 98, 16, -124, -299, -415, -273, -200, -146, -437, -457, 75, 84, -233, -54, -292, -319, -99, -28, -97, -435, -479, -255, -234, -447, -157, 82, -450, 86, -478, -58, 9, -500, -87, 29, -286, -378, -466, 88, -366, -425, -38, -134, -184, 32, -13, -263, -371, -246, 33, -41, -192, -14, -311, -478, -374, -186, -353, -334, -265, -169, -418, 63, 77, 77, -197, -211, -276, -190, -68, -184, -185, -235, -31, -465, -297, -277, -456, -181, -219, -329, 40, -341, -476, 28, -313, -78, -165, -310, -496, -450, -318, -483, -22, -84, 83, -185, -140, -62, -114, -141, -189, -395, -63, -359, 26, -318, 86, -449, -419, -2, 81, -326, -339, -56, -123, 10, -463, 41, -458, -409, -314, -125, -495, -256, -388, 75, 40, -37, -449, -485, -487, -376, -262, 57, -321, -364, -246, -330, -36, -473, -482, -94, -63, -414, -159, -200, -13, -405, -268, -455, -293, -298, -416, -222, -207, -473, -377, -167, 56, -488, -447, -206, -215, -176, 76, -304, -163, -28, -210, -18, -484, 45, 10, 79, -441, -197, -16, -145, -422, -124, 79, -464, -60, -214, -457, -400, -36, 47, 8, -151, -489, -327, 85, -297, -395, -258, -31, -56, -500, -61, -18, -474, -426, -162, -79, 25, -361, -88, -241, -225, -367, -440, -200, 38, -248, -429, -284, -23, 19, -220, -105, -81, -269, -488, -204, -28, -138, 39, -389, 40, -263, -297, -400, -158, -310, -270, -107, -336, -164, 36, 11, -192, -359, -136, -230, -410, -66, 67, -396, -146, -158, -264, -13, -15, -425, 58, -25, -241, 85, -82, -49, -150, -37, -493, -284, -107, 93, -183, -60, -261, -310, -380 });
+            //var a = Scaler.addBinary("110", "10");
+            //var a = Scaler.Day51ass4(new List<List<int>> { new List<int> { -83, -73, -70, -61 }, new List<int> { -56, -48, -13, 4 }, new List<int> { 38, 48, 71, 71 } });
+            //var a = Scaler.Day68ass1(new List<int> { 1, 2, 3, 4, 5 }, 5);
+            //var a=Scaler.adjacent(new List<List<int>> { new List<int>() { 16, 5, 54, 55, 36, 82, 61, 77, 66, 61 }, new                                                        List<int> { 31, 30, 36, 70, 9, 37, 1, 11, 68, 14 } });
+            //var a = Scaler.Day57ass1(new List<int> { 3, 9, 6, 8, 3 });
+            //var a = Scaler.Day78ass1(3);
+            //var a = Scaler.Day63ass1(new List<int> { 1, 4, 10, 2, 1, 5 });
+            //var a = Scaler.repeatedNumber(new List<int> { 1, 2, 3, 1, 1 });
+            
         }
 
+        #region Day 83 ass2
+        public int lca(TreeNode A, int B, int C)
+        {
+            if (checkNodeExists(A,B)==false||checkNodeExists(A,C)==false)
+            {
+                return -1;
+            }
+            return getLca(A,B,C);
+        }
+
+        bool checkNodeExists(TreeNode A,int val)
+        {
+            if (A==null)
+            {
+                return false;
+            }
+
+            if (A.val==val)
+            {
+                return true;
+            }
+
+            return checkNodeExists(A.left,val)||checkNodeExists(A.right,val);
+        }
+
+        int getLca(TreeNode A,int B,int C)
+        {
+            if (A==null)
+            {
+                return 0;
+            }
+            if (A.val==B||A.val==C)
+            {
+                return A.val;
+            }
+
+            int left=getLca(A.left,B,C);
+            int right=getLca(A.right,B,C);
+            if (left==0)
+            {
+                return right;
+            }
+            else if (right==0)
+            {
+                return left;
+            }
+
+            return A.val;
+        }
+        #endregion
+
+        #region Day 95 ass2
+        public int Dat95ass2(int A, List<int> B,List<int> C)
+        {
+            int[] dp=new int[A+1];
+            for (int i = 1; i <= A; i++)
+            {
+                for (int j = 0; j < B.Count; j++)
+                {
+                    if (C[j]<=i)
+                    {
+                        dp[i] = Math.Max(dp[i], B[j] + dp[i - C[j]]);
+                    }
+                }
+            }
+            return dp[A];
+        }
+        #endregion
+
+        #region Day 90 ass4
+        int mod = 10000003;
+        public int seats(string A)
+        {
+            int i = 0, j = A.Length - 1;
+            while (i < j)
+            {
+                char itemp = A[i];
+                char jtemp = A[j];
+                if (itemp=='x'&&jtemp!='x')
+                {
+                    j--;
+                }
+                else if (jtemp=='x'&&itemp!='x')
+                {
+                    i++;
+                }
+                else
+                {
+                    i++;
+                    j--;
+                }
+            }
+
+            return (LeftCheck(A.Substring(0, i)) + RightCheck(A.Substring(i))) % mod;
+        }
+
+        private int LeftCheck(string A)
+        {
+            int count = 0;
+            int sum = 0;
+            for (int i = 0; i < A.Length; i++)
+            {
+                if (A[i]=='x')
+                {
+                    count++;
+                }
+                else
+                {
+                    sum += count;
+                    sum %= mod;
+                }
+            }
+            return sum;
+        }
+        private int RightCheck(string A)
+        {
+            int count = 0;
+            int sum = 0;
+            for (int i = A.Length-1; i >=0; i--)
+            {
+                if (A[i]=='x')
+                {
+                    count++;
+                }
+                else
+                {
+                    sum += count;
+                    sum %= mod;
+                }
+            }
+            return sum;
+        }
+        #endregion
+        #region Day 73 ass4
+        public ListNode reverseBetween(ListNode A, int B, int C)
+        {
+            ListNode prev = null;
+            ListNode curr = A;
+            if (B==1)
+            {
+                return reverse_list(A, C - B + 1);
+            }
+            else
+            {
+                for (int i = 1; i < B; i++)
+                {
+                    prev = curr;
+                    curr=curr.next;
+                }
+                prev.next = reverse_list(curr, C - B + 1);
+                return A;
+            }
+        }
+
+        public static ListNode reverse_list(ListNode A,int B)
+        {
+            ListNode first = A;
+            ListNode prev = null;
+            ListNode curr = A;
+            ListNode temp;
+
+            for (int i = 0; i < B; i++)
+            {
+                temp = curr.next;
+                curr.next = prev;
+                prev = curr;
+                curr = temp;
+            }
+            first.next = curr;
+            return prev;
+        }
+        #endregion
+
+        #region Day 37 ass4
+
+#if false
+        public int repeatedNumber(List<int> a)
+        {
+            int can1 = a[0];
+            int can2 = 0;
+            int vote1 = 1;
+            int vote2 = 0;
+            for(int i=1; i<a.Count; i++)
+            {
+                if (a[i]==can1)
+                {
+                    vote1++;
+                }
+                else if (a[i]==can2)
+                {
+                    vote2++;
+                }
+                else if (vote1==0)
+                {
+                    vote1++;
+                    can1 = a[i];
+                }
+                else if (vote2==0)
+                {
+                    vote2++;
+                    can2 = a[i];
+                }
+                else
+                {
+                    vote1--;
+                    vote2--;
+                }
+            }
+            int count1=0,count2=0;
+            for (int i = 0; i < a.Count; i++)
+            {
+                if (a[i]==can1)
+                {
+                    count1++;
+                }
+                if (a[i]==can2)
+                {
+                    count2++;
+                }
+            }
+            if (count1>(a.Count/3))
+            {
+                return can1;
+            }
+            if (count2>(a.Count/3))
+            {
+                return can2;
+            }
+
+            return -1;
+        }
+#else
+        public int repeatedNumber(List<int> A)
+        {
+            if (A.Count == 0)
+                return -1;
+
+            // vector<pair<int, int>>temp(2);
+            List<List<int>> temp = new List<List<int>>();
+
+            for (int i = 0; i < 2; i++)
+            {
+                temp.Add(new List<int>());
+                for (int j = 0; j < 2; j++)
+                {
+                    temp[i].Add(0);
+                }
+            }
+            temp[0][1] = temp[1][1] = 0;
+            for (int i = 0; i < A.Count; i++)
+            {
+                int j;
+                if (temp[0][0] == A[i] || temp[1][0] == A[i])
+                {
+                    if (temp[0][0] == A[i]) temp[0][1] += 1;
+                    else temp[1][1] += 1;
+                }
+                else
+                {
+                    int l;
+                    if (temp[0][1] == 0 || temp[1][1] == 0)
+                    {
+                        int index = (temp[0][1] == 0) ? 0 : 1;
+                        temp[index][0] = A[i];
+                        temp[index][1] = 1;
+                    }
+                    else
+                    {
+                        temp[0][1] -= 1;
+                        temp[1][1] -= 1;
+                    }
+                }
+            }
+            for (int i = 0; i < 2; i++)
+            {
+                int ac = 0; // actual count
+                for (int j = 0; j < A.Count; j++)
+                    if (A[j] == temp[i][0])
+                        ac++;
+                if (ac > (A.Count / 3)) return temp[i][0];
+            }
+            return -1;
+        }
+#endif
+#endregion
+        #region Day 63 ass1
+        public List<int> Day63ass1(List<int> A)
+        {
+            quicksort(A,0,A.Count-1);
+            return A;
+        }
+
+        public void quicksort(List<int> A,int s,int e)
+        {
+            if (s>=e)
+            {
+                return;
+            }
+            int pi=partition(A,s,e);
+            quicksort(A,s,pi-1);
+            quicksort(A,pi+1,e);
+        }
+        public int partition(List<int> A,int s,int e)
+        {
+            int p = A[e];
+            int i = s;
+            for (int j = s; j < e; j++)
+            {
+                if (A[j]<p)
+                {
+                    int temp = A[j];
+                    A[j] = A[i];
+                    A[i] = temp;
+                    i++;
+                }
+            }
+            int temp2 = A[i];
+            A[i] = A[e];
+            A[e] = temp2;
+            return i;
+        }
+
+        //{
+        //    int p1 = 1;
+        //    int p2 = A.Count - 1;
+        //    while (p1 <= p2)
+        //    {
+        //        if (A[p1] <= A[0])
+        //        {
+        //            p1 = p1 + 1;
+        //        }
+        //        else if (A[p2] > A[0])
+        //        {
+        //            p2 = p2 - 1;
+        //        }
+        //        else
+        //        {
+        //            A = Swap(A, p1, p2);
+        //            p1++;
+        //            p2--;
+        //        }
+        //    }
+
+        //    return Swap(A,0,p2);
+        //}
+
+        //private List<int> Swap(List<int> A, int p1, int p2)
+        //{
+        //    int temp = A[p1];
+        //    A[p1] = A[p2];
+        //    A[p2] = temp;
+        //    return A;
+        //}
+        #endregion
+
+        #region Day 78 ass1
+        public string Day78ass1(int A)
+        {
+            Queue<string> strings = new Queue<string>();
+            strings.Enqueue("1");
+            strings.Enqueue("2");
+            int i = 1;
+            string res = "";
+            while (i <= A)
+            {
+                res=strings.Dequeue();
+                strings.Enqueue(res+"1");
+                strings.Enqueue(res+"2");
+                i++;
+            }
+
+            return res + Reverse(res);
+        }
+
+        public static string Reverse(string s)
+        {
+            char[] charArray = s.ToCharArray();
+            Array.Reverse(charArray);
+            return new string(charArray);
+        }
+        #endregion
+        #region Day57 ass1
+        public int Day57ass1(List<int> A)
+        {
+            int n=A.Count;
+            int[] pre=new int[n];
+            int[] post=new int[n];
+
+            pre[0] = A[0];
+            for (int i = 1; i < n; i++)
+            {
+                pre[i] = GCD(pre[i - 1], A[i]);
+            }
+
+            post[n - 1] = A[n - 1];
+            for (int i = n-2; i >=0; i--)
+            {
+                post[i] = GCD(post[i + 1], A[i]);
+            }
+
+            int res = post[1];
+            for (int i = 1; i < n; i++)
+            {
+                if (i==n-1)
+                {
+                    res = Math.Max(res, pre[i - 1]);
+                }
+                else
+                {
+                    res=Math.Max(res, GCD(pre[i - 1], post[i+1]));
+                }
+            }
+
+            return res;
+        }
+
+        private int GCD(int A,int B)
+        {
+            if (B == 0)
+            {
+                return A;
+            }
+            return GCD(B, A % B);
+        }
+        #endregion
+        #region Day 94 ass3
+        public int adjacent(List<List<int>> A)
+        {
+            int n = A[0].Count;
+            List<int> vs = new List<int>();
+
+            for (int i = 0; i < n; i++)
+            {
+                if (A[0][i] > A[1][i])
+                {
+                    vs.Add(A[0][i]);
+                }
+                else
+                {
+                    vs.Add(A[1][i]);
+                }
+            }
+
+            if (n == 1)
+            {
+                return Math.Max(A[0][0], A[1][0]);
+            }
+            vs[1] = Math.Max(vs[0], vs[1]);
+            for (int i = 2; i < n; i++)
+            {
+                int temp = Math.Max(vs[i - 1], vs[i] + vs[i - 2]);
+                vs[i] = temp;
+            }
+
+            return vs[n - 1];
+        }
+        #endregion
+
+        #region Day 68 ass1
+        public List<int> Day68ass1(List<int> A,int B)
+        {
+            int j = 0;
+            long sum = 0;
+            for (int i = 0; i < A.Count; i++)
+            {
+                if (A[i] == B)
+                {
+                    return new List<int> { A[i] };
+                }
+                sum += A[i];
+                while (sum > B)
+                {
+                    sum -= A[j++];
+                }
+
+                if (sum == B)
+                {
+                    List<int> vs = new List<int>();
+                    for (int k = j; k <= i; k++)
+                    {
+                        vs.Add(A[k]);
+                    }
+                    return vs;
+                }
+            }
+            return new List<int> { -1 };
+        }
+        #endregion
+        #region Day 56 ass4
+        public int Dat56ass4(int A,int B)
+        {
+            int power = B - 2;
+            int powerFunctionValue = calculatePowerFunctionValue(A, power, B);
+            return powerFunctionValue;
+        }
+
+        private int calculatePowerFunctionValue(int A,int power,int B)
+        {
+            if (power==0)
+            {
+                return 1;
+            }
+            if (power%2==1)
+            {
+                long halfpower = calculatePowerFunctionValue(A, power / 2, B);
+                return (int)((A % B * halfpower % B * halfpower % B) % B);
+            }
+            else
+            {
+                long halfPowerValue = calculatePowerFunctionValue(A, power / 2, B);
+                return (int)((halfPowerValue % B * halfPowerValue % B) % B);
+            }
+        }
+        #endregion
+
+        #region Day 51 ass4
+        public long Day51ass4(List<List<int>> A)
+        {
+            int n = A.Count-1;
+            int m = A[0].Count-1;
+            long max_sum = A[n][m];
+            long[,] prefix=new long[n+1,m+1];
+            for (int i = 0; i <= n; i++)
+            {
+                for (int j = 0; j <= m; j++)
+                { 
+                    prefix[i,j] = A[i][j];
+                }
+            }
+
+            for (int r = n - 1; r >= 0; r--)
+            {
+                prefix[r,m] += prefix[r + 1, m];
+                max_sum = Math.Max(max_sum, prefix[r, m]);
+            }
+            for (int c = m - 1; c >= 0; c--)
+            {
+                prefix[n, c] += prefix[n, c + 1];
+                max_sum = Math.Max(max_sum, prefix[n, c]);
+            }
+
+            for (int i = n - 1; i >= 0; i--)
+            {
+                for (int j = m - 1; j >= 0; j--)
+                {
+                    prefix[i, j] += prefix[i + 1, j] + prefix[i, j + 1] - prefix[i + 1, j + 1];
+                    max_sum = Math.Max(max_sum, prefix[i, j]);
+                }
+            }
+
+            return max_sum;
+        }
+        #endregion
+
+        #region Day 54 ass4
+        public string addBinary(string A, string B)
+        {
+            int carry = 0, i = A.Length - 1, j = B.Length - 1;
+            string ans = "";
+            while (i >= 0 || j >= 0 || carry != 0)
+            {
+                int sum = 0;
+                if (i >= 0)
+                {
+                    sum += (A[i] - '0');
+                    i--;
+                }
+                if (j>=0)
+                {
+                    sum += B[j] - '0';
+                    j--;
+                }
+                sum+= carry;
+                int bit = sum % 2;
+                carry = sum / 2;
+                ans += (char)(bit + '0');
+            }
+
+            //System.Text.StringBuilder
+            StringBuilder res= new StringBuilder();
+            for(int k = ans.Length - 1; k >= 0; k--)
+            {
+                res.Append(ans[k]);
+            }
+
+            return res.ToString();
+        }
+        #endregion
+
+        #region Day 50 ass3
+        public int maxSubArray(List<int> A)
+        {
+            int cur_sum = 0;
+            int max_Sum = Int32.MinValue;
+            for(int i=0; i<A.Count; i++)
+            {
+                cur_sum += A[i];
+                max_Sum=Math.Max(max_Sum,cur_sum);
+                if (cur_sum < 0) {
+                    cur_sum = 0;
+                }
+            }
+            return max_Sum;
+        }
+        #endregion
+
+        #region Day 93 ass3
+        public int countMinSquares(int A)
+        {
+            //check(A, 0);
+            
+            return count;
+        }
+
+        
+
+        int count = 0;
+        public void check(int A, int index)
+        {
+            if (A == 0)
+            {
+                count++;
+                return;
+            }
+
+            for (int i = 1; i <= A; i++)
+            {
+                if (A < A - (i * i))
+                {
+                    break;
+                }
+                check(A-(i*i), index++);
+
+            }
+        }
+        #endregion
+
+        #region factset
+        public void faactset()
+        {
+            var names = new string[] { "Dog", "Cat", "Giraffe", "Monkey", "Tortoise" };
+            List<string> vs=new List<string>();
+            foreach (var name in names)
+            {
+                if (name.Length>3)
+                {
+                    vs.Add(name);
+                }
+            }
+
+            vs.Sort();
+            foreach (var name in vs)
+            {
+                Console.WriteLine(name);
+            }
+        }
+        #endregion
+
+        #region Day 46 ass2
+        public ListNode Day46ass2(List<List<int>> A)
+        {
+            ListNode head = null;
+            int op, x, index;
+            for (int i = 0; i < A.Count; i++)
+            {
+                op = A[i][0];
+                x = A[i][1];
+                index = A[i][2];
+
+                ListNode newNode = new ListNode(x);
+                ListNode prev = head;
+
+                int cnt = 0;
+                ListNode temp = prev;
+                while (temp != null)
+                {
+                    cnt++;
+                    temp = temp.next;
+                }
+                switch (op)
+                {
+                    case 0:
+                        //Adding node before first node                        
+                        newNode.next = head;
+                        head = newNode;
+                        break;
+                    case 1:
+                        //Adding node at the end of linked list                                                                        
+                        if (cnt == 0)
+                        {
+                            newNode.next = head;
+                            head = newNode;
+                        }
+                        else
+                        {
+                            while (prev.next != null)
+                            {
+                                prev = prev.next;
+                            }
+                            newNode.next = null;
+                            prev.next = newNode;
+                        }
+                        break;
+                    case 2:
+                        //Insert element at given position
+                        if (index == 0)
+                        {
+                            newNode.next = head;
+                            head = newNode;
+                        }
+                        else if (index <= cnt)
+                        {
+                            for (int pos = 0; pos < index - 1; pos++)
+                            {
+                                prev = prev.next;
+                            }
+                            newNode.next = prev.next;
+                            prev.next = newNode;
+                        }
+                        break;
+                    case 3:
+                        //Delete element from given position                    
+                        if (x < cnt)
+                        {
+                            if (x == 0)
+                            {
+                                head = head.next;
+                            }
+                            else
+                            {
+                                for (int pos = 0; pos < x - 1; pos++)
+                                {
+                                    prev = prev.next;
+                                }
+                                prev.next = prev.next.next;
+                            }
+                        }
+                        break;
+                }
+            }
+            return head;
+        }
+        //{
+        //    ListNode list = null;
+
+        //    int i = 0;
+        //    while (i<A.Count)
+        //    {
+        //        List<int> a = A[i];
+        //        switch (a[0])
+        //        {
+        //            case 0:
+        //                list=CaseZero(a[1], list); break;
+        //            case 1:
+        //                list=CaseOne(a[1], list);
+        //                break;
+        //            case 2:
+        //                list = CaseSecond(a[1], list, a[2]);
+        //                break;
+        //            case 3:
+        //                list = CaseThird(a[1], list);
+        //                break;
+        //        }
+        //        i++;
+        //    }
+        //    return list;
+        //}
+
+        //public ListNode CaseZero(int x,ListNode listNode)
+        //{
+        //    ListNode node = new ListNode(x);
+        //    node.next= listNode;
+        //    return node;
+        //}
+        //public ListNode CaseOne(int x, ListNode listNode)
+        //{
+        //    ListNode node = new ListNode(x);
+        //    ListNode temp = listNode;
+        //    while (temp != null && temp.next != null)
+        //    {
+        //        temp = temp.next;
+        //    }
+        //    if (temp == null)
+        //    {
+        //        temp = node;
+        //    }
+        //    else
+        //        temp.next = node;
+        //    return listNode;
+        //}
+        //public ListNode CaseSecond(int x,ListNode listNode,int index)
+        //{
+        //    int i = 1;
+        //    ListNode node = new ListNode(x);
+        //    ListNode temp = listNode;
+
+        //    if (temp == null)
+        //    {
+        //        return node;
+        //    }
+        //    else
+        //    {
+        //        int k=1;
+        //        while (temp != null)
+        //        {
+        //            temp=temp.next;
+        //            k++;
+        //        }
+        //        temp = listNode;
+        //        if (k < index)
+        //        {
+        //            return listNode;
+        //        }
+        //        else
+        //        {
+        //            for (int j = 0; j < k-1; j++)
+        //            {
+        //                temp = temp.next;
+        //            }
+        //            ListNode next = temp.next;
+        //            temp.next = node;
+        //            node.next = next;
+        //        }
+
+        //        return listNode;
+        //    }
+        //}
+        //public ListNode CaseThird(int index,ListNode listNode)
+        //{
+        //    if(listNode == null)
+        //    {
+        //        return listNode;
+        //    }
+        //    int i = 1;
+        //    ListNode temp = listNode;
+        //    while (i<index&& listNode.next != null)
+        //    {
+        //        temp=temp.next;
+        //        i++;
+        //    }
+        //    ListNode next = null;
+        //    if (temp.next!=null)
+        //    {
+        //        next = temp.next.next;
+        //    }
+        //    temp.next = next;
+        //    return listNode;
+        //}
+        #endregion
+
+        #region day 47 ass3
+        public List<int> postorderTraversal(TreeNode A)
+        {
+            List<int> list = new List<int>();
+            Stack<TreeNode> trees = new Stack<TreeNode>();
+            trees.Push(A);
+            while(trees.Count > 0)
+            {
+                TreeNode temp= trees.Pop();
+                list.Add(temp.val);
+                if (temp.left != null)
+                {
+                    trees.Push(temp.left);
+                }
+                if (temp.right!=null)
+                {
+                    trees.Push(temp.right);
+                }
+            }
+
+            list.Reverse();
+
+            return list;
+        }
+        #endregion
+        #region day 39 ass7
+        public string longestPalindrome(string A)
+        {
+            string len1 = String.Empty, len2 = String.Empty, longestString = String.Empty;
+            for (int i = 0; i < A.Length; i++)
+            {
+                //odd
+                len1 = check(A, i, i);
+                if (len1.Length>longestString.Length)
+                {
+                    longestString = len1;
+                }
+
+                //even
+                len2 = check(A, i, i+1);
+                if (len2.Length>longestString.Length) { longestString = len2; }
+            }
+
+            return longestString;
+        }
+
+        public string check(string A,int s,int e)
+        {
+            while (s >= 0 && e < A.Length && A[s] == A[e])
+            {
+                s--;
+                e++;
+            }
+            return A.Substring(s + 1, e - s - 1);
+        }
+        #endregion
+
+        #region Day 47 ass2
+        public List<int> preorderTraversal(TreeNode A)
+        {
+            List<int> result = new List<int>();
+            Stack<TreeNode> nodes = new Stack<TreeNode>();
+            nodes.Push(A);
+            while (nodes.Count != 0)
+            {
+                TreeNode temp = nodes.Peek();
+                nodes.Pop();
+                result.Add(temp.val);
+                if (temp.right != null)
+                {
+                    nodes.Push(temp.right);
+                }
+                if (temp.left != null)
+                {
+                    nodes.Push(temp.left);
+                }
+            }
+
+            return result;
+
+        }
+        #endregion
+        #region Day 47 ass1
+        public List<int> inorderTraversal(TreeNode A)
+        {
+            List<int> list = new List<int>();
+            if (A == null)
+                return list;
+            Stack<TreeNode> stack = new Stack<TreeNode>();
+            while (A != null)
+            {
+                stack.Push(A);
+                A = A.left;
+            }
+
+            while (stack.Count != 0)
+            {
+                TreeNode cur = stack.Peek();
+                stack.Pop();
+                list.Add(cur.val);
+                A = cur.right;
+                while (A != null)
+                {
+                    stack.Push(A);
+                    A = A.left;
+                }
+            }
+
+            return list;
+        }
+        #endregion
+
+        #region test26-03-2023
+        public class TreeNode2
+        {
+            public int val;
+            public TreeNode2 left;
+            public TreeNode2 right;
+            public TreeNode2(int x) { this.val = x; this.left = null; this.right = null; }
+        }
+
+        public TreeNode2 SortedArrayToBST(int[] A)
+        {
+            if (A.Length == 0)
+            {
+                return null;
+            }
+
+            //return Construct(nums, 0);
+            Queue<TreeNode2> trees = new Queue<TreeNode2>();
+            TreeNode2 pafrent = new TreeNode2(A[0]);
+            trees.Enqueue(pafrent);
+            for (int i = 1; i < A.Length - 1; i = i + 2)
+            {
+                TreeNode2 temp = trees.Dequeue();
+                temp.left = (A[i] != -1) ? new TreeNode2(A[i]) : null;
+                temp.right = (A[i + 1] != -1) ? new TreeNode2(A[i + 1]) : null;
+                if (temp.left != null)
+                {
+                    trees.Enqueue(temp.left);
+                }
+
+                if (temp.right != null)
+                {
+                    trees.Enqueue(temp.right);
+                }
+
+            }
+
+            return pafrent;
+
+        }
+
+
+
+
+        public int patternStach(string A)
+        {
+
+            Stack<char> stack = new Stack<char>();
+            stack.Push(A[0]);
+            for (int i = 1; i < A.Length; i++)
+            {
+
+                if (A[i] == ')' && stack.Peek() == '(')
+                {
+                    stack.Pop();
+                }
+                else if (A[i] == '}' && stack.Peek() == '{')
+                {
+                    stack.Pop();
+                }
+                else if (A[i] == ']' && stack.Peek() == '[')
+                {
+                    stack.Pop();
+                }
+                else
+                {
+                    stack.Push(A[i]);
+                }
+            }
+
+            return (stack.Count == 0) ? 1 : 0;
+        }
+
+        public int lengthoflongeststring(string A)
+        {
+            cusList cusList = new cusList();
+            int i = 0;
+            int res = 0;
+            while (i < A.Length)
+            {
+                if (cusList.Contains(A[i]))
+                {
+                    cusList.Remove(A[i]);
+                }
+                else
+                {
+                    cusList.Add(A[i]);
+                    res = (res < cusList.Count()) ? cusList.Count() : res;
+                    i++;
+                }
+            }
+            return res;
+        }
+
+        class cusList
+        {
+            List<char> list = new List<char>();
+            HashSet<char> hash = new HashSet<char>();
+            public cusList() { }
+            public void Add(char A)
+            {
+                list.Add(A);
+                hash.Add(A);
+            }
+            public void Remove(char A)
+            {
+                char temp = list[0];
+                list.RemoveAt(0);
+                hash.Remove(temp);
+            }
+            public bool Contains(char A)
+            {
+                return hash.Contains(A);
+            }
+            public int Count() { return list.Count; }
+        }
+        #endregion
+
+        #region day 41 ass1
+        public List<int> Day41ass1(List<int> A, int B)
+        {
+            List<int> vs = new List<int>();
+            int sum = 0;
+            int i = 0;
+            while (i < A.Count)
+            {
+                if (sum < B)
+                {
+
+                    vs.Add(A[i]);
+                    sum += A[i];
+                    i++;
+                }
+                if (sum > B)
+                {
+                    sum -= vs[0];
+                    vs.RemoveAt(0);
+                }
+
+                if (sum == B)
+                {
+                    return vs;
+                }
+            }
+            return new List<int> { -1 };
+        }
+        #endregion
+
+        #region Day 41 ass4
+        public List<int> twoSum(List<int> A, int B)
+        {
+            Dictionary<int, int> result = new Dictionary<int, int>();
+            for (int i = 0; i < A.Count; i++)
+            {
+                int temp = B - A[i];
+                if (result.ContainsKey(A[i]))
+                {
+                    return new List<int> { result[A[i]] + 1, i + 1 };
+                }
+                else
+                {
+                    if (!result.ContainsKey(temp))
+                    {
+                        result.Add(temp, i);
+                    }
+                }
+            }
+
+            return new List<int>();
+        }
+        #endregion
+        #region Day 40 ass3
+        public List<int> lszero(List<int> A)
+        {
+            Dictionary<int, int> vs = new Dictionary<int, int>();
+            int max = 0;
+
+            int si = -1;
+            int se = -1;
+            int sum = 0;
+            vs.Add(0, -1);
+            for (int i = 0; i < A.Count; i++)
+            {
+                sum += A[i];
+                if (vs.ContainsKey(sum))
+                {
+                    int temp = i - vs[sum];
+                    if (temp > max)
+                    {
+                        si = vs[sum] + 1;
+                        se = i;
+                        max = temp;
+                    }
+                }
+                else
+                {
+                    vs.Add(sum, i);
+                }
+            }
+
+            List<int> list = new List<int>();
+            if (si == -1)
+            {
+                return list;
+            }
+            for (int i = si; i < se + 1; i++)
+            {
+                list.Add(A[i]);
+            }
+            return list;
+        }
+        #endregion
+        #region Day 40 ass2
+        public int Day40ass2(List<int> A)
+        {
+            Dictionary<int, int> vs = new Dictionary<int, int>();
+            int res = A.Count + 1;
+            for (int i = 0; i < A.Count; i++)
+            {
+                if (vs.ContainsKey(A[i]))
+                {
+                    if (res > vs[A[i]])
+                    {
+                        res = vs[A[i]];
+                    }
+                }
+                else
+                {
+                    vs.Add(A[i], i);
+                }
+            }
+            if (res == A.Count + 1)
+            {
+                return -1;
+            }
+            else
+            {
+                return A[res];
+            }
+        }
+        #endregion
         #region Day 37 ass5
         public int Day37ass5(int A)
         {
@@ -81,7 +1309,7 @@ namespace techgig
             while (A > 0)
             {
                 int r = A % 2;
-                A=A/2;
+                A = A / 2;
                 ans += r * power;
                 power *= 5;
             }
@@ -90,9 +1318,9 @@ namespace techgig
         #endregion
 
         #region Day 40 ass1
-        public List<int> Day40ass1(List<int> A,List<int> B)
+        public List<int> Day40ass1(List<int> A, List<int> B)
         {
-            Dictionary<int,int> vs= new Dictionary<int,int>();
+            Dictionary<int, int> vs = new Dictionary<int, int>();
             foreach (var item in A)
             {
                 if (vs.ContainsKey(item))
@@ -104,7 +1332,7 @@ namespace techgig
                     vs.Add(item, 1);
                 }
             }
-            List<int> res= new List<int>();
+            List<int> res = new List<int>();
             foreach (var item in B)
             {
                 if (vs.ContainsKey(item) && vs[item] > 0)
@@ -136,7 +1364,7 @@ namespace techgig
         public int majorityElement(List<int> A)
         {
             int N = A.Count / 2;
-            Dictionary<int,int> vs=new Dictionary<int,int>();
+            Dictionary<int, int> vs = new Dictionary<int, int>();
             foreach (int i in A)
             {
                 if (vs.ContainsKey(i))
@@ -145,7 +1373,7 @@ namespace techgig
                 }
                 else
                 {
-                    vs.Add(i,1);
+                    vs.Add(i, 1);
                 }
             }
 
@@ -153,10 +1381,10 @@ namespace techgig
             int count = 0;
             foreach (KeyValuePair<int, int> i in vs)
             {
-                if (i.Value>N&&count<i.Value)
+                if (i.Value > N && count < i.Value)
                 {
-                    res=i.Key;
-                    count=i.Value;
+                    res = i.Key;
+                    count = i.Value;
                 }
             }
 
@@ -220,13 +1448,13 @@ namespace techgig
         public List<List<int>> permute(List<int> A)
         {
             List<List<int>> res = new List<List<int>>();
-            int[] hash=new int[11];
+            int[] hash = new int[11];
             List<int> cur = new List<int>();
             for (int i = 0; i < A.Count; i++)
             {
                 hash[A[i]]++;
             }
-            fetch(res,hash,cur,A.Count);
+            fetch(res, hash, cur, A.Count);
             return res;
         }
 
@@ -239,13 +1467,13 @@ namespace techgig
 
             for (int i = 0; i < 11; i++)
             {
-                if (hash[i]>0)
+                if (hash[i] > 0)
                 {
                     hash[i]--;
                     cur.Add(i);
-                    fetch(res,hash,cur,n);
+                    fetch(res, hash, cur, n);
                     hash[i]++;
-                    cur.RemoveAt(cur.Count-1);
+                    cur.RemoveAt(cur.Count - 1);
                 }
             }
         }

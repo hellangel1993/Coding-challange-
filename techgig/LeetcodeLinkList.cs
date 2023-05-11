@@ -198,9 +198,9 @@ namespace techgig
             return dummy.next;
         }
         //leetcode 21
-        public ListNode MergeTwoLists(ListNode l1, ListNode l2)
+        public ListNode MergeTwoLists(ListNode A, ListNode B)
         {
-            if (l1 == null && l2 == null)
+            if (A == null && B == null)
             {
                 return new ListNode();
             }
@@ -208,34 +208,32 @@ namespace techgig
 
             ListNode temp = dummy;
 
-            while (l1 != null || l2 != null)
+            while (A != null || B != null)
             {
-                if (l1 != null && l2 != null)
+                if (A != null && B != null)
                 {
-                    if (l1.val <= l2.val)
+                    if (A.val <= B.val)
                     {
-                        temp.next = l1;
-                        l1 = l1.next;
+                        temp.next = A;
+                        A = A.next;
                         temp = temp.next;
                     }
                     else
                     {
-                        temp.next = l2;
-                        l2 = l2.next;
+                        temp.next = B;
+                        B = B.next;
                         temp = temp.next;
                     }
                 }
-                else if (l1 == null && l2 != null)
+                else if (A == null && B != null)
                 {
-                    temp.next = l2;
-                    l2 = l2.next;
-                    temp = temp.next;
+                    temp.next = B;
+                    break;
                 }
-                else if (l1 != null && l2 == null)
+                else if (A != null && B == null)
                 {
-                    temp.next = l1;
-                    l1 = l1.next;
-                    temp = temp.next;
+                    temp.next = A;
+                    break;
                 }
             }
 
@@ -598,7 +596,7 @@ namespace techgig
         static void Main(string[] args)
         {
             LeetcodeLinkList l = new LeetcodeLinkList();
-            //l.MergeTwoLists(new ListNode(1, new ListNode(2, new ListNode(4, null))), new ListNode(1, new ListNode(3, new ListNode(4, null))));
+            l.MergeTwoLists(new ListNode(1,null), new ListNode(1, new ListNode(3, new ListNode(4, null))));
             //l.DeleteDuplicates(new ListNode(1,new ListNode(1,new ListNode(1,new ListNode(2,new ListNode(3,new ListNode(4,new ListNode(4,new ListNode(4,null)))))))));
             //l.SwapPairs(new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, null)))));
             //l.AddTwoNumbers(new ListNode(3, new ListNode(7, null)), new ListNode(9, new ListNode(2, null)));
@@ -611,7 +609,7 @@ namespace techgig
             //var vs = l.SpiralOrder(new int[3][] { new int[3] { 1, 2, 3 }, new int[3] { 4, 5, 6 }, new int[3] { 7, 8, 9 } });
             //int[][] vs = l.GenerateMatrix(3);
 
-            l.InvertTree(new TreeNode(4, new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7, new TreeNode(6), new TreeNode(9))));
+            //l.InvertTree(new TreeNode(4, new TreeNode(2, new TreeNode(1), new TreeNode(3)), new TreeNode(7, new TreeNode(6), new TreeNode(9))));
         }
     }
 }
