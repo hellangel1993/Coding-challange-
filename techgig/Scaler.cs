@@ -95,9 +95,253 @@ namespace techgig
             //var a = Scaler.Day78ass1(3);
             //var a = Scaler.Day63ass1(new List<int> { 1, 4, 10, 2, 1, 5 });
             //var a = Scaler.repeatedNumber(new List<int> { 1, 2, 3, 1, 1 });
-            
+            //var a = Scaler.kthsmallest(new List<int> { 2, 1, 4, 3, 2 }, 3);
+            //var a = Scaler.searchInsert(new List<int> { 1, 3, 5, 6 }, 7);
+            var a = Scaler.Day68ass4(new List<int> { 1,-4,0,0,5,-5,1,0,-2,4,-4,1,-1,-4,3,4,-1,-1,-3 });
         }
 
+        #region Day 68 ass 4
+        public List<List<int>> Day68ass4(List<int> A)
+        {
+            List<List<int>> res = new List<List<int>>();
+            List<int> list = new List<int>();
+
+            if (A == null)
+            {
+                return res;
+            }
+
+            A.Sort();
+            int n=A.Count;
+
+            for (int low = 0; low < n - 2; low++)
+            {
+                int mid = low + 1;
+                int high = n - 1;
+                int sum = -A[low];
+
+                if (low > 0 && A[low] == A[low - 1])
+                {
+                    continue;
+                }
+                while (mid < high)
+                {
+                    int num = A[mid] + A[high];
+                    if (num == sum)
+                    {
+                        res.Add(new List<int> { A[low], A[mid], A[high] });
+                        int prev = mid;
+                        while (mid < high && A[mid] == A[prev])
+                        {
+                            mid++;
+                        }
+                    }
+                    else if (num < sum)
+                    {
+                        mid++;
+                    }
+                    else
+                    {
+                        high--;
+                    }
+                }
+            }
+            return res;
+        }
+        #endregion
+
+        #region Day 77 ass 1
+        public List<int> prevSmaller(List<int> A)
+        {
+            List<int> list = new List<int>();
+            Stack<int> stack = new Stack<int>();
+
+            for (int i = 0; i < A.Count;)
+            {
+                if (stack.Count == 0)
+                {
+                    list.Add(-1);
+                    stack.Push(A[i]);
+                    i++;
+                }
+                else
+                {
+                    if (stack.First() >= A[i])
+                    {
+                        stack.Pop();
+                    }
+                    else
+                    {
+                        list.Add(stack.First());
+                        i++;
+                    }
+                }
+            }
+            return list;
+        }
+        #endregion
+
+        #region Day 64 ass 1
+        public int searchInsert(List<int> A, int B)
+        {
+            int start = 0;
+            int end=A.Count-1;
+            int temp = 0;
+            while (end>=start)
+            {
+                temp = (start+end)/2;
+                if (A[temp]==B)
+                {
+                    return temp;
+                }
+                if (A[temp]<B)
+                {
+                    start = temp+1;
+                }
+                else
+                {
+                    end=temp-1;
+                }
+            }
+            return start;
+        }
+        #endregion
+
+        #region Day 61 ass2
+        public int kthsmallest(List<int> A, int B)
+        {
+            for (int i = 0; i <=B; i++)
+            {
+                for (int j = 0; j < A.Count - i - 1; j++)
+                {
+                    if (A[j] < A[A.Count- i - 1])
+                    {
+                        int temp = A[j];
+                        A[j] = A[A.Count - i - 1];
+                        A[A.Count - i - 1] = temp;
+                    }
+                }
+            }
+            return A[A.Count - B];
+        }
+        #endregion
+
+        #region Day 90 ass1
+        public int candy(List<int> A)
+        {
+            int[] leftArray= new int[A.Count];
+            int[] rightArray= new int[A.Count];
+            leftArray[0]=1;
+            for (int i = 1; i < A.Count; i++)
+            {
+                if (A[i] > A[i-1])
+                {
+                    leftArray[i] = leftArray[i - 1] + 1;
+                }
+                else
+                {
+                    leftArray[i] = 1;
+                }
+            }
+            rightArray[rightArray.Length - 1] = Math.Max(leftArray[leftArray.Length - 1], 1);
+            for (int i = A.Count-2; i >=0; i--)
+            {
+                if (A[i] > A[i+1])
+                {
+                    rightArray[i] = Math.Max(leftArray[i], rightArray[i + 1] + 1);
+                }
+                else
+                {
+                    rightArray[i] = Math.Max(leftArray[i], 1);
+                }
+            }
+            int totalCandies = 0;
+            for (int i = 0; i < rightArray.Length; i++)
+            {
+                totalCandies += rightArray[i];
+            }
+            return totalCandies;
+        }
+        #endregion
+        #region Day 83 ass3
+
+        List<int> result = new List<int>();
+        HashSet<TreeNode> visited = new HashSet<TreeNode>();
+        private void findNodesForRoot(TreeNode A,int depth)
+        {
+            if (A==null||depth<0||visited.Contains(A))
+            {
+                return;
+            }
+            visited.Add(A);
+            if (depth==0)
+            {
+                result.Add(A.val);
+                return;
+            }
+            Queue<TreeNode> queue = new Queue<TreeNode>();
+            queue.Enqueue(A);
+            int level = 0;
+            while (queue.Count!=0)
+            {
+                int size = queue.Count;
+                while (size-->0)
+                {
+                    TreeNode node = queue.Dequeue();
+                    if (level<depth)
+                    {
+                        if (node.left!=null&&!visited.Contains(node.left))
+                        {
+                            queue.Enqueue(node.left);
+                        }
+                        if (node.right!=null&&!visited.Contains(node.right))
+                        {
+                            queue.Enqueue(node.right);
+                        }
+                    }
+                    else
+                    {
+                        result.Add((int)node.val);
+                    }
+                }
+                ++level;
+            }
+        }
+
+        private int traverse(TreeNode A,int B,int C)
+        {
+            if (A == null)
+            {
+                return -1;
+            }
+            if (A.val==B)
+            {
+                findNodesForRoot(A, C);
+                return C - 1;
+            }
+            int depth = traverse(A.left, B, C);
+            if (depth>=0)
+            {
+                findNodesForRoot(A, depth);
+                return depth-1;
+            }
+            depth=traverse(A.right, B, C);
+            if (depth>=0)
+            {
+                findNodesForRoot(A, depth);
+                return depth-1;
+            }
+            return -1;
+        }
+        public List<int> solve(TreeNode A, int B, int C)
+        {
+            if (A!=null)
+            {
+                traverse(A, B, C);
+            }
+            return result;
+        }
+        #endregion
         #region Day 83 ass2
         public int lca(TreeNode A, int B, int C)
         {
